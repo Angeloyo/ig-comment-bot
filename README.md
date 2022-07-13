@@ -1,4 +1,4 @@
-# bot-instagram-comment -webscraping with selenium-
+# Instagram comment bot, webscraping with selenium.
 Simple python script working with selenium driver to webscrap instagram and spam comments on a post
 
 ## Steps
