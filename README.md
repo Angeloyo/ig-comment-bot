@@ -56,5 +56,6 @@ python3 IgCommentBot.py
 10. Use ctrl + c to stop the script
 
 
-[^note]:
-    Only for learning purposes :)
+
+
+Only for learning purposes :)
