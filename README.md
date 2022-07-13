@@ -16,6 +16,7 @@ pip install selenium
 Official download link: https://www.selenium.dev/documentation/webdriver/getting_started/install_drivers/
 
 The script is coded for firefox browser, so I recommend you to use it too. If you want to use a different one, you will need to edit the code.
+For Chrome use webdriver.Firefox()
 Really useful page of selenium-pyhton if you want to work on your own and learn more: https://selenium-python.readthedocs.io/getting-started.html#
 
 3. Change your username and password from IgCommentBot.py
@@ -50,7 +51,7 @@ savedcookies = false
 ```bash
 python3 IgCommentBot.py
 ```
-9. It's highly probable you will get errors in the future because instagram changed their config. Try to find the new path to the elements.
+9. It's highly probable you will get errors in the future because instagram changed their config or because the website is showing differently in your device. Try to find the new path to the elements (Xpath, CSS...) via browser developer tools
 
 10. Use ctrl + c to stop the script
 
