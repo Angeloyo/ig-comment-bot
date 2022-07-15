@@ -46,7 +46,7 @@ waitingtime = 10
 
 if so, set this variable to true.
 ```python
-savedcookies = false
+savedcookies = False
 ```
 8. No more config. Run the script
 ```bash
