@@ -52,7 +52,7 @@ savedcookies = False
 ```bash
 python3 IgCommentBot.py
 ```
-9. It's highly probable you will get errors in the future because instagram changed their config or because the website is showing differently in your device. Try to find the new path to the elements (Xpath, CSS...) via browser developer tools. I only tested this on a mac.
+9. It's highly probable you will get errors in the future because instagram changed their web design or because the website is showing differently in your device. Try to find the new path to the elements (Xpath, CSS...) via browser developer tools. I only tested this on a mac.
 
 10. Use ctrl + c to stop the script
 
