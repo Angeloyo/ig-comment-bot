@@ -5,6 +5,7 @@ from selenium.webdriver import ActionChains
 from selenium.webdriver.common.keys import Keys
 from time import sleep
 import random
+import sys
 
 # YOUR USERNAME
 name = "your username"
@@ -18,7 +19,7 @@ url = "your url"
 # YOUR COMMENT
 yourcomment = "your comment"
 
-# WAITING TIME BETWEEN EACH COMMENT
+# WAITING TIME (SECONDS) BETWEEN EACH COMMENT
 waitingtime = 5
 
 # DEALING WITH COOKIES?
@@ -50,7 +51,7 @@ def login():
     sleep(0.3)
 
     #login!
-    boton_login = driver.find_element(By.XPATH, "/html/body/div[1]/section/main/div/div/div[1]/div[2]/form/div/div[3]/button")
+    boton_login = driver.find_element_by_xpath("//button[@type='submit']")
     boton_login.click()
 
     sleep(2)
@@ -61,7 +62,7 @@ def comments():
     sleep(4)
 
     #find the place to write
-    button_write = driver.find_element(By.CSS_SELECTOR, "._ablz")
+    button_write = driver.find_element(By.XPATH,'//*[@class ="_aidk"]//textarea')
     sleep(0.8)
 
     #write the comment
@@ -69,7 +70,7 @@ def comments():
     sleep(0.9)
 
     # send the comment!
-    button_publish = driver.find_element(By.XPATH, "/html/body/div[1]/div/div[1]/div/div[1]/div/div/div/div[1]/div[1]/section/main/div[1]/div[1]/article/div/div[2]/div/div[2]/section[3]/div/form/button")
+    button_publish = driver.find_element(By.XPATH, "/html/body/div[2]/div/div/div/div[1]/div/div/div/div[1]/div[1]/div[2]/section/main/div[1]/div[1]/article/div/div[2]/div/div[2]/section[3]/div/form/div[2]/div")
     button_publish.click()
 
     counter = 1
@@ -77,13 +78,13 @@ def comments():
     print(textcounter)
     i = 1
     # ugly infinite loop
-    while i <= 10:
+    while i <= sys.maxsize:
 
         # waiting... }:)
         sleep(waitingtime)
 
         #find the place to write
-        button_write = driver.find_element(By.CSS_SELECTOR, "._ablz")
+        button_write = driver.find_element(By.XPATH,'//*[@class ="_aidk"]//textarea')
         sleep(0.8)
 
         #write the comment
