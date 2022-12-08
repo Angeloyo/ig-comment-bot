@@ -51,7 +51,7 @@ def login():
     sleep(0.3)
 
     #login!
-    boton_login = driver.find_element_by_xpath("//button[@type='submit']")
+    boton_login = driver.find_element(By.XPATH, "//button[@type='submit']")
     boton_login.click()
 
     sleep(2)
