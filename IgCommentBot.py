@@ -62,7 +62,7 @@ def comments():
     sleep(4)
 
     #find the place to write
-    button_write = driver.find_element(By.XPATH,'//*[@class ="_aidk"]//textarea')
+    button_write = driver.find_element(By.XPATH, '//*[@class ="_aidk"]//textarea')
     sleep(0.8)
 
     #write the comment
@@ -70,7 +70,7 @@ def comments():
     sleep(0.9)
 
     # send the comment!
-    button_publish = driver.find_element(By.XPATH, "/html/body/div[2]/div/div/div/div[1]/div/div/div/div[1]/div[1]/div[2]/section/main/div[1]/div[1]/article/div/div[2]/div/div[2]/section[3]/div/form/div[2]/div")
+    button_publish = driver.find_element(By.XPATH, '/html/body/div[2]/div/div/div/div[1]/div/div/div/div[1]/div[1]/div[2]/section/main/div[1]/div[1]/article/div/div[2]/div/div[2]/section[3]/div/form/div[2]/div')
     button_publish.click()
 
     counter = 1
@@ -84,7 +84,7 @@ def comments():
         sleep(waitingtime)
 
         #find the place to write
-        button_write = driver.find_element(By.XPATH,'//*[@class ="_aidk"]//textarea')
+        button_write = driver.find_element(By.XPATH, '//*[@class ="_aidk"]//textarea')
         sleep(0.8)
 
         #write the comment
