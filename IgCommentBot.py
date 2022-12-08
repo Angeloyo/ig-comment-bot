@@ -6,7 +6,6 @@ from selenium.webdriver.common.keys import Keys
 from time import sleep
 import random
 import sys
-import argparse
 
 # YOUR USERNAME
 name = "your username"
