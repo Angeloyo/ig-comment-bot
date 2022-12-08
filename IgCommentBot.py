@@ -6,12 +6,21 @@ from selenium.webdriver.common.keys import Keys
 from time import sleep
 import random
 import sys
+import argparse
+
+# Create the parser
+parser = argparse.ArgumentParser()
+# Add arguments
+parser.add_argument('--name', type=str, required=True)
+parser.add_argument('--passw', type=str, required=True)
+# Parse the arguments
+args = parser.parse_args()
 
 # YOUR USERNAME
-name = "your username"
+name = args.name
 
 # YOUR PASSWORD
-passw = "your password"
+passw = args.passw
 
 # YOUR URL
 url = "your url"
