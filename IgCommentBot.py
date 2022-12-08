@@ -8,19 +8,11 @@ import random
 import sys
 import argparse
 
-# Create the parser
-parser = argparse.ArgumentParser()
-# Add arguments
-parser.add_argument('--name', type=str, required=True)
-parser.add_argument('--passw', type=str, required=True)
-# Parse the arguments
-args = parser.parse_args()
-
 # YOUR USERNAME
-name = args.name
+name = "your username"
 
 # YOUR PASSWORD
-passw = args.passw
+passw = "your password"
 
 # YOUR URL
 url = "your url"
