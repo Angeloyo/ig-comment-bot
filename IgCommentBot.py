@@ -4,8 +4,6 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver import ActionChains
 from selenium.webdriver.common.keys import Keys
 from time import sleep
-import random
-import sys
 
 # YOUR USERNAME
 name = "your username"
@@ -77,8 +75,9 @@ def comments():
     textcounter = "Number of comments: " + str(counter)
     print(textcounter)
     i = 1
-    # ugly infinite loop
-    while i <= sys.maxsize:
+    
+    # infinite loop
+    while (True):
 
         # waiting... }:)
         sleep(waitingtime)
