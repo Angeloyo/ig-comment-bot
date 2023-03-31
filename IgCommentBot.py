@@ -6,19 +6,19 @@ from selenium.webdriver.common.keys import Keys
 from time import sleep
 
 # YOUR USERNAME
-name = "your username"
+name = "angeloyolowlife"
 
 # YOUR PASSWORD
-passw = "your password"
+passw = "Eseculitogotmesimping"
 
 # YOUR URL
-url = "your url"
+url = "https://www.instagram.com/p/CqDpQo4piyE/"
 
 # YOUR COMMENT
-yourcomment = "your comment"
+yourcomment = "hello"
 
 # WAITING TIME (SECONDS) BETWEEN EACH COMMENT
-waitingtime = 5
+waitingtime = 10
 
 # DEALING WITH COOKIES?
 savedcookies = False
@@ -30,7 +30,7 @@ driver = webdriver.Firefox()
 
 def declinecookies():
     #find the decline cookies button
-    button_cookie = driver.find_element(By.XPATH, "/html/body/div[4]/div/div/button[1]")
+    button_cookie = driver.find_element(By.CSS_SELECTOR, "button._a9--:nth-child(2)")
     sleep(1)   
 
     #click it
@@ -60,7 +60,7 @@ def comments():
     sleep(4)
 
     #find the place to write
-    button_write = driver.find_element(By.XPATH, '//*[@class ="_aidk"]//textarea')
+    button_write = driver.find_element(By.CSS_SELECTOR, "textarea.x1i0vuye")
     sleep(0.8)
 
     #write the comment
@@ -68,7 +68,7 @@ def comments():
     sleep(0.9)
 
     # send the comment!
-    button_publish = driver.find_element(By.XPATH, '/html/body/div[2]/div/div/div/div[1]/div/div/div/div[1]/div[1]/div[2]/section/main/div[1]/div[1]/article/div/div[2]/div/div[2]/section[3]/div/form/div[2]/div')
+    button_publish = driver.find_element(By.XPATH, '/html/body/div[2]/div/div/div[1]/div/div/div/div[1]/div[1]/div[2]/section/main/div/div[1]/div/div[2]/section/div/form/div/div[2]/div')
     button_publish.click()
 
     counter = 1
@@ -83,8 +83,11 @@ def comments():
         sleep(waitingtime)
 
         #find the place to write
-        button_write = driver.find_element(By.XPATH, '//*[@class ="_aidk"]//textarea')
-        sleep(0.8)
+
+        #button_write = driver.find_element(By.XPATH, '//*[@class ="_aidk"]//textarea')
+        button_write = driver.find_element(By.CSS_SELECTOR, "textarea.x1i0vuye")
+        
+        #sleep(0.8)
 
         #write the comment
         button_write.send_keys(yourcomment)
